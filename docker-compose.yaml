@@ -1,0 +1,11 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: java -cp app:app/lib/* com.example.restservice.RestServiceApplication
+    ports:
+      - "8080:8080"
+    # volumes:
+    #   - ./client:/code
+    #   - /code/node_modules
